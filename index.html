@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" id="app">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="js/app.js" type="module"></script>
+  <title>{{ data?.course?.name }} | {{ data?.course?.term }} | {{ data?.university?.name }}</title>
+</head>
+
+<body>
+<header :style="`background-color: ${data?.theme?.primaryColor}`">
+  <div v-if="data?.course && data?.university" class="container">
+    <h1>{{ data?.course.name }}</h1>
+    <ul>
+      <li>{{ data?.course.code }}</li>
+      <li>{{ data?.university.name }}: {{ data?.university.college }}</li>
+      <li>{{ data?.university.department }}</li>
+    </ul>
+  </div>
+  <nav v-if="data?.navigation?.length" :style="`background-color: ${data?.theme?.secondaryColor}`">
+    <ul class="container">
+      <li v-for="item in data?.navigation">
+        <a :href="item.url">{{ item.text }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container main-content">
+  <aside v-if="data?.instructor">
+    <ul class="card">
+      <li><img src="img/dave.jpeg" alt="Adjunct Professor Berning cheesing for the camera in a turquoise plaid shirt."></li>
+      <li>{{ data.instructor.title }} {{ data.instructor.name }}</li>
+      <li>{{ data?.course.time }}</li>
+      <li><a :href="`mailto:${data.instructor.email}`">{{ data.instructor.email }}</a></li>
+      <li>Office Hours: {{ data.instructor.officeHours }}</li>
+    </ul>
+    <div class="card">
+      <h3>About the Instructor</h3>
+      <p>{{ data.instructor.name }} is a Senior Front-End Engineer at <abbr title="Walker &amp; Dunlop">WDTech</abbr>. As a senior member of the team, Dave is responsible for planning and executing front-end design systems as well as creating user interfaces for various web applications.</p>
+      <p>He graduated with an Associate's of Applied Science in 2013 from <abbr title="University of Cincinnati: Blue Ash College">UCBA</abbr> and a Bachelor's of Fine Arts from <abbr title="University of Cincinnati: College-Conservatory of Music">CCM</abbr> in 2015.</p>
+      <p>He lives in Florence, Kentucky with his wife Stephanie and two dogs, Dale (6) and Hank (5).</p>
+    </div>
+  </aside>
+  <main>
+    <section id="description">
+      <h2>Course Description</h2>
+      <p v-html="data?.course?.description" />
+    </section>
+
+    <section id="outcomes">
+      <h2>Student Learning Outcomes of the Course</h2>
+      <ul>
+        <li v-for="outcome in data?.course?.learningOutcomes">{{ outcome }}</li>
+      </ul>
+    </section>
+
+    <section id="course">
+      <h2 v-if="data?.course">{{ data?.course.term }}: {{ data?.course.type }} Course</h2>
+      <p v-for="line in data?.course?.typeDescription" v-html="line"></p>
+      <template v-if="data?.course?.notes?.length">
+        <h3>Notes</h3>
+        <ul>
+          <li v-for="note in data?.course.notes" v-html="note"></li>
+        </ul>
+      </template>
+      <p class="alert warning"><strong>Important:</strong> This syllabus is subject to change.</p>
+    </section>
+
+    <section id="required-text">
+      <h2>Required Texts</h2>
+      <p>None! 🎉. Go save your money or spend it on the recommended texts and resources below.</p>
+    </section>
+
+    <section v-if="data?.recommendedText?.length" id="recommended-text-resources" class="grid has-2-col">
+      <h2>Recommended Texts and Resources</h2>
+      <ul v-for="text in data?.recommendedText" class="card">
+        <li><em>{{ text.name }}</em></li>
+        <li>by {{ text.author }}</li>
+        <li>Publisher: {{ text.publisher }}</li>
+        <li v-if="text.isbn">ISBN: {{ text.isbn }}</li>
+        <li v-if="text.isbn10">ISBN-10: {{ text.isbn10 }}</li>
+        <li v-if="text.isbn13">ISBN-13: {{ text.isbn13 }}</li>
+      </ul>
+    </section>
+
+    <section id="tech-requirements">
+      <h2>Technical and Software Requirements</h2>
+      <p>As part of this {{ course?.type.toLowerCase() }} course, all students are required to have (or have access to) an Internet connection. In addition, all students of the Media Production degree program must have (or have access to) a laptop that meets or exceeds the technical specifications put forth by the {{ university?.department }} of the {{ university?.college }}.</p>
+
+      <p>In this course, we will be using Microsoft Visual Studio Code (VSCode), however you are not required to use that. If you decide to use a different text-editor, please be aware that technical support may not be provided. In addition, students must have access to Illustrator or Photoshop which can be accessed via a subscription from Adobe directly.</p>
+
+
+      <template v-if="data?.requiredTech?.length">
+        <h3>Technical</h3>
+        <div class="grid has-3-col print:has-4-col avoid-page-break">
+          <ul v-for="tech in data?.requiredTech" class="card">
+            <li><img :src="tech.image" /></li>
+            <li>{{ tech.name }}</li>
+            <li><small>{{ tech.description }}</small></li>
+          </ul>
+        </div>
+      </template>
+
+      <template v-if="data?.requiredSoftware?.length">
+        <h3>Software</h3>
+        <div class="grid has-4-col print-has-4-col avoid-page-break">
+          <ul v-for="software in data?.requiredSoftware" class="card">
+            <li><img :src="software.image" /></li>
+            <li>{{ software.name }}</li>
+            <li>Price: {{ software.price }}</li>
+          </ul>
+        </div>
+      </template>
+    </section>
+
+    <section v-if="data?.prerequisites?.length" id="prerequisites" class="grid has-2-col avoid-page-break">
+      <h2>Prerequisite Courses</h2>
+      <ul v-for="prerequisite in data?.prerequisites" class="card">
+        <li><strong>{{ prerequisite.code }}</strong></li>
+        <li>{{ prerequisite.name }}</li>
+      </ul>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <div v-for="(module, i) in data?.schedule" class="avoid-page-break" style="margin: 3rem 0;">
+        <h3>Week {{ i + 1 }}: {{ module.name }}</h3>
+        <div class="week grid has-4-col">
+          <div class="grid has-2-col">
+            <p v-for="date in module.dates" class="date" :style="`border-color: ${data.theme.primaryColor}`">
+              <span>{{ new Date(date).toLocaleDateString(locale, { weekday: 'short' }) }}</span>
+              <span>{{ new Date(date).getDate() }}</span>
+              <span :style="`background: ${data.theme.primaryColor}`">
+                {{ new Date(date).toLocaleDateString(locale, { month: 'short' }) }} '{{ new Date(date).toLocaleDateString(locale, { year: '2-digit' }) }}
+              </span>
+            </p>
+          </div>
+          <div class="card">
+            <ul>
+              <li v-for="topic in module.topics">{{ topic }}</li>
+            </ul>
+          </div>
+        </div>
+        <p class="card" v-if="module.exercise">
+          <strong>Exercise:</strong> {{ module.exercise }}
+        </p>
+        <p class="card" v-if="module.assignment">
+          <strong>Assignment:</strong> <a :href="module.assignment.link" target="_blank">{{ module.assignment.text }}</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>Copyright &copy; {{ new Date().getFullYear() }}</p>
+  <p>Course subjects and materials provided by {{ data?.instructor?.title }} {{ data?.instructor?.name }}</p>
+  <p>{{ data?.university?.name }}: {{ data?.university?.college }} {{ data?.university?.department }}</p>
+</footer>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: env.apiKey,
+    authDomain: env.authDomain,
+    projectId: env.projectId,
+    storageBucket: env.storageBucket,
+    messagingSenderId: env.messagingSenderId,
+    appId: env.appId,
+    measurementId: env.measurementId
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

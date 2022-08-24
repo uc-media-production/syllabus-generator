@@ -1,0 +1,369 @@
+{
+  "course": {
+    "code": "MPRO 2010-001",
+    "description": [
+      "This course focuses on the implementation of core technologies in web design and development. With prior experience designing digital media assets, students in New Media I will put finger tips to keyboard to create rich interative experiences with the front-end technologies of HTML, CSS, and JavaScript. Through out the course, students will gain an understanding of user interface (UI) and user experience (UX) design. Additional topics include UI/UX design principles, website planning, responsive web development, and general computer literacy."
+    ],
+    "learningOutcomes": [
+      "Design intuitive, clean, and visually appealing web interfaces using modern HTML, CSS, and JavaScript.",
+      "Produce websites that dynamically display data from online feeds.",
+      "Integrate multimedia components such as audio and video into websites.",
+      "Demonstrate proficiency incorporating third-party libraries in a codebase to enhance the user experience",
+      "Use interactive forms to capture user data and store this information in databases",
+      "Use online systems, wireless technologies and/or video conferencing to participate in instructional tutorials and group collaboration"
+    ],
+    "name": "New Media I",
+    "notes": [
+      "A working knowledge of Adobe Photoshop and Adobe Illustrator is required for this course.",
+      "<em>Exercises</em> are works in progress, as students learn new theories and apply knowledge of design and production techniques, as well as the use of digital technologies.",
+      "<em>Assignments</em> are projects that fulfill specific objectives put forth in assignment descriptions."
+    ],
+    "term": "Fall 2022",
+    "time": "M/W 10:30am-11:50am",
+    "type": "Partically Distant",
+    "typeDescription": [
+      "This course will be taught in-person and online using Canvas as a foundational platform and using video conferencing and email to communicate with and engage students. As a partically online course, much of the information for instruction, as well as the descriptions of exercises, assignments and projects, will be posted on Canvas in an easily accessible format, providing students the opportunity to work from a location of their choice. As a <em>synchronous</em> course, meeting times for each section (001 and 002) are set and listed above. Students will receive electronic communication providing login information for each class meeting in advance.",
+      "Students can take advantage of virutal office hours every Friday from 5pm-7pm."
+    ]
+  },
+  "instructor": {
+    "connect": [
+      {
+        "link": "https://ucincinnati.zoom.us/j/94266897267",
+        "type": "Zoom"
+      },
+      {
+        "link": "bernindw@ucmail.uc.edu",
+        "type": "email"
+      },
+      {
+        "link": "https://www.linkedin.com/in/davidberning/",
+        "type": "LinkedIn"
+      },
+      {
+        "link": "https://github.com/daveberning",
+        "type": "GitHub"
+      },
+      {
+        "link": "https://daveberning.io",
+        "type": "website"
+      }
+    ],
+    "email": "bernindw@ucmail.uc.edu",
+    "name": "Dave Berning",
+    "officeHours": "Virtual - Friday's 5pm-7pm",
+    "title": "Adj. Prof."
+  },
+  "navigation": [
+    {
+      "text": "Description",
+      "url": "#"
+    },
+    {
+      "text": "Resources",
+      "url": "#"
+    },
+    {
+      "text": "Tech Requirements",
+      "url": "#"
+    },
+    {
+      "text": "Schedule",
+      "url": "#"
+    }
+  ],
+  "prerequisites": [
+    {
+      "code": "MPRO-1005",
+      "name": "Integrated Media Production I"
+    },
+    {
+      "code": "MPRO-1006",
+      "name": "Integrated Media Production II"
+    }
+  ],
+  "recommendedText": [
+    {
+      "author": "Steven Krug",
+      "isbn10": "9780321344755",
+      "isbn13": "978-0321344755",
+      "link": "https://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758",
+      "name": "Don't Make Me Think, 2nd Edition",
+      "publisher": "New Riders Pub"
+    },
+    {
+      "author": "John Bowers",
+      "isbn": "0471292249",
+      "name": "Introduction to Two-Dimensional Design: Understanding Form and Function",
+      "publisher": "John Wiley & Sons"
+    },
+    {
+      "author": "Dave Berning",
+      "link": "https://www.amazon.com/Vue-js-Understanding-its-Tools-Ecosystem-ebook/dp/B07KCBY1B4/ref=sr_1_1?crid=25JZWJM7R3Y1N&keywords=dave+berning&qid=1661018302&s=books&sprefix=dave+berning%2Cstripbooks%2C93&sr=1-1",
+      "name": "Vue.js: Understanding its Tools and Ecosystem",
+      "publisher": "Bleeding Edge Press"
+    },
+    {
+      "author": "Dave Berning",
+      "name": "How to Develop Websites with Vue.js",
+      "publisher": "Digital Ocean"
+    }
+  ],
+  "requiredSoftware": [
+    {
+      "image": "img/vs-code.png",
+      "name": "VS Code",
+      "price": "Free"
+    },
+    {
+      "image": "https://desktop.github.com/images/desktop-icon.svg",
+      "name": "GitHub Desktop",
+      "price": "Free"
+    },
+    {
+      "image": "img/photoshop.png",
+      "name": "Photoshop",
+      "price": "$20/mo"
+    },
+    {
+      "image": "img/illustrator.png",
+      "name": "Illustrator",
+      "price": "$20/mo"
+    }
+  ],
+  "requiredTech": [
+    {
+      "description": "To access the course online. As well as downloading third-party assets and libraries.",
+      "image": "img/wifi.png",
+      "name": "Internet Connection"
+    },
+    {
+      "description": "Hard drive or cloud storage to store all of your assets and projects.",
+      "image": "img/harddrive.png",
+      "name": "Storage"
+    },
+    {
+      "description": "To access the course online. As well as downloading third-party assets and libraries.",
+      "image": "img/www.png",
+      "name": "Personalized Domain"
+    }
+  ],
+  "schedule": [
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/pWj49dXV",
+        "text": "Git Basics"
+      },
+      "dates": [
+        "2022-08-22T04:00:00.000Z",
+        "2022-08-24T04:00:00.000Z"
+      ],
+      "name": "Class Overview / History of the Web / What is a Browser?",
+      "topics": [
+        "Introductions and syllabus overview",
+        "History of the Web; why was it created?",
+        "Request lifecycle between client and server",
+        "Basics of Git and GitHub Classroom"
+      ]
+    },
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/qpdmLhGZ",
+        "text": "HTML Semantics and Fundamentals"
+      },
+      "dates": [
+        "2022-08-29T04:00:00.000Z",
+        "2022-08-31T04:00:00.000Z"
+      ],
+      "name": "HTML Fundamentals and Semantics",
+      "topics": [
+        "What is HTML (markup)?",
+        "Purpose of HTML, CSS, JS and how they work together",
+        "Understanding the semantics of HTML",
+        "W3C Validation"
+      ]
+    },
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/SDPmmyg7",
+        "text": "HTML Media Tags"
+      },
+      "dates": [
+        "2022-09-05T04:00:00.000Z",
+        "2022-09-07T04:00:00.000Z"
+      ],
+      "name": "HTML Media Tags",
+      "topics": [
+        "Adding media into webpages: images, video, audio, embedded (YouTube)",
+        "Understanding web-safe file types for video and audio",
+        "Adding responsive images as a picture source set"
+      ]
+    },
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/KrHwk34f",
+        "text": "Wireframes and Personas"
+      },
+      "dates": [
+        "2022-09-12T04:00:00.000Z",
+        "2022-09-14T04:00:00.000Z"
+      ],
+      "name": "Design Concepts / Wireframes / Personas",
+      "topics": [
+        "What makes a good user experience (UX)?",
+        "What makes a good user interface (UI)?",
+        "Color Theory and Typography",
+        "Website planning with wireframes and personas"
+      ]
+    },
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/BYZnvRy_",
+        "text": "CSS Fundamentals"
+      },
+      "dates": [
+        "2022-09-19T04:00:00.000Z",
+        "2022-09-21T04:00:00.000Z"
+      ],
+      "name": "CSS Fundamentals",
+      "topics": [
+        "What is CSS? What is it used for?",
+        "Understanding the box model",
+        "Classes and IDs",
+        "Dissecting a CSS style rule"
+      ]
+    },
+    {
+      "assignment": {
+        "link": "https://classroom.github.com/a/EVLQ-_0F",
+        "text": "CSS Positioning"
+      },
+      "dates": [
+        "2022-09-26T04:00:00.000Z",
+        "2022-09-28T04:00:00.000Z"
+      ],
+      "name": "CSS Positioning",
+      "topics": [
+        "Absolute, relative, fixed, and static positioning",
+        "Using overflow styles in combination with positioning",
+        "Create a navigation using positioning"
+      ]
+    },
+    {
+      "dates": [
+        "2022-10-03T04:00:00.000Z",
+        "2022-10-05T04:00:00.000Z"
+      ],
+      "name": "CSS Pseudo Elements, Selectors, and Custom Web Fonts",
+      "topics": [
+        "Pseudo Elements (::before, ::after)",
+        "Pseudo Selectors (:nth-child, :first-of-type, etc)",
+        "Advanced CSS Selectors (direct sibling, adjacent, etc)"
+      ]
+    },
+    {
+      "dates": [
+        "2022-10-10T04:00:00.000Z",
+        "2022-10-12T04:00:00.000Z"
+      ],
+      "name": "Creating Layouts with CSS Grid and Flexbox",
+      "topics": [
+        "Creating broad layouts with CSS Grid",
+        "Adjusting elements in a Grid cell with Flex"
+      ]
+    },
+    {
+      "dates": [
+        "2022-10-17T04:00:00.000Z",
+        "2022-10-19T04:00:00.000Z"
+      ],
+      "name": "Animation with CSS Keyframes",
+      "topics": [
+        "Transitions and transforms",
+        "Animating individual CSS properties",
+        "CSS keyframes for more advanced animations"
+      ]
+    },
+    {
+      "dates": [
+        "2022-10-24T04:00:00.000Z",
+        "2022-10-26T04:00:00.000Z"
+      ],
+      "name": "Responsive Design with Media Queries",
+      "topics": [
+        "Variables, constants, functions",
+        "Arrays, objects, booleans, numbers, etc",
+        "Functions in JavaScript"
+      ]
+    },
+    {
+      "dates": [
+        "2022-10-31T04:00:00.000Z",
+        "2022-11-02T04:00:00.000Z"
+      ],
+      "name": "JavaScript Fundamentals and Events",
+      "topics": [
+        "Variables, constants, functions",
+        "Arrays, objects, booleans, numbers, etc",
+        "Functions in JavaScript"
+      ]
+    },
+    {
+      "dates": [
+        "2022-11-07T04:00:00.000Z",
+        "2022-11-09T04:00:00.000Z"
+      ],
+      "name": "JavaScript Events and Loops",
+      "topics": [
+        "Review of variables, data types, and events",
+        "Making decisions with code",
+        "for, while, forEach, map, loops"
+      ]
+    },
+    {
+      "dates": [
+        "2022-11-14T05:00:00.000Z",
+        "2022-11-16T05:00:00.000Z"
+      ],
+      "name": "Integrating JavaScript Third-Party Libraries",
+      "topics": [
+        "What is a library?",
+        "Plugin integration (lightbox, image sliders)",
+        "Introduction to Vue.js"
+      ]
+    },
+    {
+      "dates": [
+        "2022-11-21T05:00:00.000Z",
+        "2022-11-23T05:00:00.000Z"
+      ],
+      "name": "Review and Production Lab",
+      "topics": [
+        "Brief review of course to-date",
+        "In-person guidance and assistance for final projects",
+        "Week of Thanksgiving!"
+      ]
+    },
+    {
+      "dates": [
+        "2022-11-28T05:00:00.000Z",
+        "2022-11-30T05:00:00.000Z"
+      ],
+      "name": "Final Project Presentations",
+      "topics": [
+        "Present your final project!",
+        "Explain your design choices",
+        "Share any frustrations and complications"
+      ]
+    }
+  ],
+  "theme": {
+    "primaryColor": "#e00122",
+    "secondaryColor": "#b8191c"
+  },
+  "university": {
+    "college": "College-Conservatory of Music",
+    "department": "Media Production Division",
+    "name": "University of Cincinnati"
+  }
+}

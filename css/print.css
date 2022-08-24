@@ -1,0 +1,61 @@
+body {
+  font-size: 12px;
+}
+
+* {
+  line-height: 1rem;
+}
+
+/* HEADER
+------------------------------- */
+header {
+  background: none;
+  margin: .5rem 0 0 0;
+  border-bottom: 2px solid #ccc;
+}
+
+header div {
+  gap: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header * {
+  color: #000;
+}
+
+header nav {
+  display: none;
+}
+
+* {
+  text-align: justify;
+}
+
+/* MAIN
+------------------------------- */
+.main-content {
+  grid-template-columns: 1fr;
+}
+
+aside {
+  display: none;
+}
+
+.grid.print-has-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.print-has-3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.print-has-4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.avoid-page-break {
+  page-break-inside: avoid;
+}
